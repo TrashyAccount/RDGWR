@@ -48,7 +48,6 @@ Sound.Volume = 0.5
 Sound:Play()
 wait(5)
 Sound:Pause()
-wait (10)
 WelcomeFrame.Visible = false
 -- Main Gui
 -- Gui to Lua
@@ -87,7 +86,7 @@ local Open = Instance.new("TextButton")
 
 TecnoHubJailbreak.Name = "TecnoHubJailbreak"
 TecnoHubJailbreak.Parent = game.CoreGui
-local Visible = false
+
 MainWindow.Name = "MainWindow"
 MainWindow.Parent = TecnoHubJailbreak
 MainWindow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -101,7 +100,7 @@ MainWindow.SliceCenter = Rect.new(100, 100, 100, 100)
 MainWindow.SliceScale = 0.120
 MainWindow.Draggable = true
 MainWindow.Active = true
-MainWindow.Visible = Visible
+MainWindow.Visible = false
 
 Title.Name = "Title"
 Title.Parent = MainWindow
@@ -125,7 +124,7 @@ Container.ImageColor3 = Color3.fromRGB(44, 44, 44)
 Container.ScaleType = Enum.ScaleType.Slice
 Container.SliceCenter = Rect.new(100, 100, 100, 100)
 Container.SliceScale = 0.120
-Container.Visible = Visible
+Container.Visible = false
 
 Bank.Name = "Bank"
 Bank.Parent = Container
@@ -627,7 +626,10 @@ Open.MouseButton1Click:Connect(function()
     Container.Visible = true
     OpenFrame.Visible = false
     end)
-
+if WhitelistCheckerVisible == true then do
+MainWindow.Visible = true
+Container.Visible = true
+end
 -- This is Redwood Prison
 elseif game.PlaceId == 402122991 then
 -- Welcome
@@ -1267,6 +1269,10 @@ Container.Visible = true
 OpenFrame.Visible = false
 end)
 
+if WhitelistCheckerVisible == true then do
+MainWindow.Visible = true
+Container.Visible = true
+end
 else
 print("Invalid Game "..game.PlaceId.." is not available")
 end
