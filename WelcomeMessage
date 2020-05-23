@@ -1,0 +1,1270 @@
+-- This is Jailbreak
+if game.PlaceId == 606849621 then
+-- Welcome
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Welcome = Instance.new("ScreenGui")
+local WelcomeFrame = Instance.new("ImageLabel")
+local PlayerName = Instance.new("TextLabel")
+local Sound = Instance.new("Sound")
+
+--Properties:
+
+Welcome.Name = "Welcome"
+Welcome.Parent = game.CoreGui
+
+WelcomeFrame.Name = "WelcomeFrame"
+WelcomeFrame.Parent = Welcome
+WelcomeFrame.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+WelcomeFrame.BackgroundTransparency = 1.000
+WelcomeFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+WelcomeFrame.Position = UDim2.new(0.726851881, 0, 0.108108103, 0)
+WelcomeFrame.Size = UDim2.new(0, 252, 0, 53)
+WelcomeFrame.Image = "rbxassetid://3570695787"
+WelcomeFrame.ImageColor3 = Color3.fromRGB(44, 44, 44)
+WelcomeFrame.ScaleType = Enum.ScaleType.Slice
+WelcomeFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+WelcomeFrame.SliceScale = 0.120
+
+PlayerName.Name = "PlayerName"
+PlayerName.Parent = WelcomeFrame
+PlayerName.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+PlayerName.Position = UDim2.new(0.15476191, 0, 0.264150947, 0)
+PlayerName.Size = UDim2.new(0, 173, 0, 25)
+PlayerName.Font = Enum.Font.SourceSans
+PlayerName.BorderColor3 = Color3.fromRGB(44,44,44)
+LocalPlayer = game.Players.LocalPlayer.Name
+PlayerName.Text = "Welcome To TecnoHub, ".. LocalPlayer
+PlayerName.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerName.TextSize = 14.000
+
+Sound.Name = "Sound"
+Sound.Parent = WelcomeFrame
+Sound.SoundId = "rbxassetid://2672209057"
+Sound.Volume = 0.5
+Sound:Play()
+wait(5)
+Sound:Pause()
+wait (10)
+WelcomeFrame.Visible = false
+-- Main Gui
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local TecnoHubJailbreak = Instance.new("ScreenGui")
+local MainWindow = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local Container = Instance.new("ImageLabel")
+local Bank = Instance.new("TextButton")
+local Logo = Instance.new("ImageLabel")
+local Jewelery = Instance.new("TextButton")
+local Museum = Instance.new("TextButton")
+local PowerPlant = Instance.new("TextButton")
+local VolcanoBase = Instance.new("TextButton")
+local Garage = Instance.new("TextButton")
+local CrimBase = Instance.new("TextButton")
+local JailYard = Instance.new("TextButton")
+local JailInFront = Instance.new("TextButton")
+local Airport = Instance.new("TextButton")
+local WalkSpeed = Instance.new("TextButton")
+local JumpPower = Instance.new("TextButton")
+local Noclip = Instance.new("TextButton")
+local Give = Instance.new("TextButton")
+local Mod = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local Site = Instance.new("TextLabel")
+local Teleports = Instance.new("TextLabel")
+local Local = Instance.new("TextLabel")
+local OpenFrame = Instance.new("ImageLabel")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+TecnoHubJailbreak.Name = "TecnoHubJailbreak"
+TecnoHubJailbreak.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+MainWindow.Name = "MainWindow"
+MainWindow.Parent = TecnoHubJailbreak
+MainWindow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainWindow.BackgroundTransparency = 1.000
+MainWindow.Position = UDim2.new(0.283179015, 0, 0.0307125151, 0)
+MainWindow.Size = UDim2.new(0, 562, 0, 321)
+MainWindow.Image = "rbxassetid://3570695787"
+MainWindow.ImageColor3 = Color3.fromRGB(105, 24, 127)
+MainWindow.ScaleType = Enum.ScaleType.Slice
+MainWindow.SliceCenter = Rect.new(100, 100, 100, 100)
+MainWindow.SliceScale = 0.120
+MainWindow.Draggable = true
+MainWindow.Active = true
+
+Title.Name = "Title"
+Title.Parent = MainWindow
+Title.BackgroundColor3 = Color3.fromRGB(105, 24, 127)
+Title.BorderColor3 = Color3.fromRGB(105, 24, 127)
+Title.Position = UDim2.new(0.350533813, 0, 0.0186915882, 0)
+Title.Size = UDim2.new(0, 167, 0, 14)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Jailbreak"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 14.000
+
+Container.Name = "Container"
+Container.Parent = MainWindow
+Container.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Container.BackgroundTransparency = 1.000
+Container.Position = UDim2.new(0.0302491114, 0, 0.0841121003, 0)
+Container.Size = UDim2.new(0, 527, 0, 274)
+Container.Image = "rbxassetid://3570695787"
+Container.ImageColor3 = Color3.fromRGB(44, 44, 44)
+Container.ScaleType = Enum.ScaleType.Slice
+Container.SliceCenter = Rect.new(100, 100, 100, 100)
+Container.SliceScale = 0.120
+
+Bank.Name = "Bank"
+Bank.Parent = Container
+Bank.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Bank.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Bank.Position = UDim2.new(0.0462748595, 0, 0.154993281, 0)
+Bank.Size = UDim2.new(0, 132, 0, 19)
+Bank.Font = Enum.Font.SourceSans
+Bank.Text = "Bank"
+Bank.TextColor3 = Color3.fromRGB(255, 255, 255)
+Bank.TextSize = 14.000
+Bank.MouseButton1Click:Connect(function()
+    function tpcar(...)
+        car = nil;
+        for i,v in next, game:GetService("Workspace").Vehicles:GetDescendants() do
+            if v.ClassName == "StringValue" then
+                if v.Value == game:GetService("Players").LocalPlayer.Name then
+                    car = v.Parent.Parent;
+                end
+            end
+        end
+        car.Model.Body.CFrame = CFrame.new(...)
+    end
+    tpcar(0.813627839, 19.6744919, 776.752441)
+    
+end)
+
+Logo.Name = "Logo"
+Logo.Parent = Container
+Logo.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Logo.BorderColor3 = Color3.fromRGB(44, 44, 44)
+Logo.Position = UDim2.new(0.417794973, 0, 0.685393274, 0)
+Logo.Size = UDim2.new(0, 84, 0, 81)
+Logo.Image = "http://www.roblox.com/asset/?id=5024815481"
+
+Jewelery.Name = "Jewelery"
+Jewelery.Parent = Container
+Jewelery.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Jewelery.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Jewelery.Position = UDim2.new(0.0462748595, 0, 0.257183075, 0)
+Jewelery.Size = UDim2.new(0, 132, 0, 19)
+Jewelery.Font = Enum.Font.SourceSans
+Jewelery.Text = "Jewelery"
+Jewelery.TextColor3 = Color3.fromRGB(255, 255, 255)
+Jewelery.TextSize = 14.000
+Jewelery.MouseButton1Click:Connect(function()
+    function tpcar(...)
+        car = nil;
+        for i,v in next, game:GetService("Workspace").Vehicles:GetDescendants() do
+            if v.ClassName == "StringValue" then
+                if v.Value == game:GetService("Players").LocalPlayer.Name then
+                    car = v.Parent.Parent;
+                end
+            end
+        end
+        car.Model.Body.CFrame = CFrame.new(...)
+    end
+    tpcar(130.018692, 20.6561642, 1370.22937)
+end)
+
+Museum.Name = "Museum"
+Museum.Parent = Container
+Museum.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Museum.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Museum.Position = UDim2.new(0.0462748595, 0, 0.359372854, 0)
+Museum.Size = UDim2.new(0, 132, 0, 19)
+Museum.Font = Enum.Font.SourceSans
+Museum.Text = "Museum"
+Museum.TextColor3 = Color3.fromRGB(255, 255, 255)
+Museum.TextSize = 14.000
+Museum.MouseButton1Click:Connect(function()
+    function tpcar(...)
+        car = nil;
+        for i,v in next, game:GetService("Workspace").Vehicles:GetDescendants() do
+            if v.ClassName == "StringValue" then
+                if v.Value == game:GetService("Players").LocalPlayer.Name then
+                    car = v.Parent.Parent;
+                end
+            end
+        end
+        car.Model.Body.CFrame = CFrame.new(...)
+    end
+    tpcar(1034.52063, 135.412399, 1241.33374)
+end)
+
+PowerPlant.Name = "PowerPlant"
+PowerPlant.Parent = Container
+PowerPlant.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+PowerPlant.BorderColor3 = Color3.fromRGB(255, 255, 255)
+PowerPlant.Position = UDim2.new(0.0462748595, 0, 0.461562574, 0)
+PowerPlant.Size = UDim2.new(0, 132, 0, 19)
+PowerPlant.Font = Enum.Font.SourceSans
+PowerPlant.Text = "PowerPlant"
+PowerPlant.TextColor3 = Color3.fromRGB(255, 255, 255)
+PowerPlant.TextSize = 14.000
+PowerPlant.MouseButton1Click:Connect(function()
+    function tpcar(...)
+        car = nil;
+        for i,v in next, game:GetService("Workspace").Vehicles:GetDescendants() do
+            if v.ClassName == "StringValue" then
+                if v.Value == game:GetService("Players").LocalPlayer.Name then
+                    car = v.Parent.Parent;
+                end
+            end
+        end
+        car.Model.Body.CFrame = CFrame.new(...)
+    end
+    tpcar(701.504822, 38.8622093, 2349.73584)
+end)
+
+VolcanoBase.Name = "VolcanoBase"
+VolcanoBase.Parent = Container
+VolcanoBase.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+VolcanoBase.BorderColor3 = Color3.fromRGB(255, 255, 255)
+VolcanoBase.Position = UDim2.new(0.0462748595, 0, 0.560102701, 0)
+VolcanoBase.Size = UDim2.new(0, 132, 0, 19)
+VolcanoBase.Font = Enum.Font.SourceSans
+VolcanoBase.Text = "Volcano Base"
+VolcanoBase.TextColor3 = Color3.fromRGB(255, 255, 255)
+VolcanoBase.TextSize = 14.000
+VolcanoBase.MouseButton1Click:Connect(function()
+    function tpcar(...)
+        car = nil;
+        for i,v in next, game:GetService("Workspace").Vehicles:GetDescendants() do
+            if v.ClassName == "StringValue" then
+                if v.Value == game:GetService("Players").LocalPlayer.Name then
+                    car = v.Parent.Parent;
+                end
+            end
+        end
+        car.Model.Body.CFrame = CFrame.new(...)
+    end
+    tpcar(1744.60022, 51.8507004, -1738.41296)
+end)
+
+Garage.Name = "Garage"
+Garage.Parent = Container
+Garage.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Garage.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Garage.Position = UDim2.new(0.0462748595, 0, 0.658642828, 0)
+Garage.Size = UDim2.new(0, 132, 0, 19)
+Garage.Font = Enum.Font.SourceSans
+Garage.Text = "Garage"
+Garage.TextColor3 = Color3.fromRGB(255, 255, 255)
+Garage.TextSize = 14.000
+Garage.MouseButton1Click:Connect(function()
+    function tpcar(...)
+        car = nil;
+        for i,v in next, game:GetService("Workspace").Vehicles:GetDescendants() do
+            if v.ClassName == "StringValue" then
+                if v.Value == game:GetService("Players").LocalPlayer.Name then
+                    car = v.Parent.Parent;
+                end
+            end
+        end
+        car.Model.Body.CFrame = CFrame.new(...)
+    end
+    tpcar(-383.161011, 19.6615963, 1230.39148)
+end)
+
+CrimBase.Name = "CrimBase"
+CrimBase.Parent = Container
+CrimBase.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+CrimBase.BorderColor3 = Color3.fromRGB(255, 255, 255)
+CrimBase.Position = UDim2.new(0.0462748595, 0, 0.771781504, 0)
+CrimBase.Size = UDim2.new(0, 132, 0, 19)
+CrimBase.Font = Enum.Font.SourceSans
+CrimBase.Text = "Crim-Base-City"
+CrimBase.TextColor3 = Color3.fromRGB(255, 255, 255)
+CrimBase.TextSize = 14.000
+CrimBase.MouseButton1Click:Connect(function()
+
+    function tpcar(...)
+        car = nil;
+        for i,v in next, game:GetService("Workspace").Vehicles:GetDescendants() do
+            if v.ClassName == "StringValue" then
+                if v.Value == game:GetService("Players").LocalPlayer.Name then
+                    car = v.Parent.Parent;
+                end
+            end
+        end
+        car.Model.Body.CFrame = CFrame.new(...)
+    end
+    tpcar(-293.35144, 19.6737099, 1606.64404)
+end)
+
+JailYard.Name = "JailYard"
+JailYard.Parent = Container
+JailYard.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+JailYard.BorderColor3 = Color3.fromRGB(255, 255, 255)
+JailYard.Position = UDim2.new(0.0462748595, 0, 0.877620935, 0)
+JailYard.Size = UDim2.new(0, 132, 0, 19)
+JailYard.Font = Enum.Font.SourceSans
+JailYard.Text = "Jail (Yard)"
+JailYard.TextColor3 = Color3.fromRGB(255, 255, 255)
+JailYard.TextSize = 14.000
+JailYard.MouseButton1Click:Connect(function()
+    function tpcar(...)
+        car = nil;
+        for i,v in next, game:GetService("Workspace").Vehicles:GetDescendants() do
+            if v.ClassName == "StringValue" then
+                if v.Value == game:GetService("Players").LocalPlayer.Name then
+                    car = v.Parent.Parent;
+                end
+            end
+        end
+        car.Model.Body.CFrame = CFrame.new(...)
+    end
+    tpcar(-1231.12231, 19.8804264, -1765.46301)
+end)
+
+JailInFront.Name = "JailInFront"
+JailInFront.Parent = Container
+JailInFront.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+JailInFront.BorderColor3 = Color3.fromRGB(255, 255, 255)
+JailInFront.Position = UDim2.new(0.32521224, 0, 0.154993281, 0)
+JailInFront.Size = UDim2.new(0, 132, 0, 19)
+JailInFront.Font = Enum.Font.SourceSans
+JailInFront.Text = "Jail Infront"
+JailInFront.TextColor3 = Color3.fromRGB(255, 255, 255)
+JailInFront.TextSize = 14.000
+JailInFront.MouseButton1Click:Connect(function()
+    function tpcar(...)
+        car = nil;
+        for i,v in next, game:GetService("Workspace").Vehicles:GetDescendants() do
+            if v.ClassName == "StringValue" then
+                if v.Value == game:GetService("Players").LocalPlayer.Name then
+                    car = v.Parent.Parent;
+                end
+            end
+        end
+        car.Model.Body.CFrame = CFrame.new(...)
+    end
+    tpcar(-1171.71021, 20.7232456, -1394.76538)
+end)
+
+Airport.Name = "Airport"
+Airport.Parent = Container
+Airport.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Airport.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Airport.Position = UDim2.new(0.32521224, 0, 0.257183075, 0)
+Airport.Size = UDim2.new(0, 132, 0, 19)
+Airport.Font = Enum.Font.SourceSans
+Airport.Text = "Airport"
+Airport.TextColor3 = Color3.fromRGB(255, 255, 255)
+Airport.TextSize = 14.000
+Airport.MouseButton1Click:Connect(function()
+    function tpcar(...)
+        car = nil;
+        for i,v in next, game:GetService("Workspace").Vehicles:GetDescendants() do
+            if v.ClassName == "StringValue" then
+                if v.Value == game:GetService("Players").LocalPlayer.Name then
+                    car = v.Parent.Parent;
+                end
+            end
+        end
+        car.Model.Body.CFrame = CFrame.new(...)
+    end
+    tpcar(-1131.99207, 46.3411217, 2693.01196)
+end)
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = Container
+WalkSpeed.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+WalkSpeed.BorderColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeed.Position = UDim2.new(0.708513916, 0, 0.154993281, 0)
+WalkSpeed.Size = UDim2.new(0, 132, 0, 19)
+WalkSpeed.Font = Enum.Font.SourceSans
+WalkSpeed.Text = "WalkSpeed"
+WalkSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeed.TextSize = 14.000
+WalkSpeed.MouseButton1Click:Connect(function()
+require(game:GetService("ReplicatedStorage").Game.CharacterUtil).WalkSpeedSpring.Target = 30
+end)
+
+JumpPower.Name = "JumpPower"
+JumpPower.Parent = Container
+JumpPower.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+JumpPower.BorderColor3 = Color3.fromRGB(255, 255, 255)
+JumpPower.Position = UDim2.new(0.708513916, 0, 0.257183075, 0)
+JumpPower.Size = UDim2.new(0, 132, 0, 19)
+JumpPower.Font = Enum.Font.SourceSans
+JumpPower.Text = "JumpPower"
+JumpPower.TextColor3 = Color3.fromRGB(255, 255, 255)
+JumpPower.TextSize = 14.000
+JumpPower.MouseButton1Click:Connect(function()
+    local screnv = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.LocalScript)
+    local real_pcall = screnv.pcall
+    screnv.pcall = function(f)
+        for _,v in next,getupvalues(f) do
+            if v == screnv then
+            for k2,v2 in next,getupvalues(f) do
+                    if v2==false then
+                        setupvalue(f,k2,true)
+                    end
+                end
+                screnv.pcall = real_pcall
+                break
+            end
+        end
+        return real_pcall(f)
+    end
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+end)
+
+Noclip.Name = "Noclip"
+Noclip.Parent = Container
+Noclip.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Noclip.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Noclip.Position = UDim2.new(0.708513916, 0, 0.359372854, 0)
+Noclip.Size = UDim2.new(0, 132, 0, 19)
+Noclip.Font = Enum.Font.SourceSans
+Noclip.Text = "Noclip (V)"
+Noclip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Noclip.TextSize = 14.000
+Noclip.MouseButton1Click:Connect(function()
+
+    local screnv = getsenv(game:GetService("Players").LocalPlayer.PlayerScripts.LocalScript)
+    local real_pcall = screnv.pcall
+    screnv.pcall = function(f)
+        for _,v in next,getupvalues(f) do
+            if v == screnv then
+            for k2,v2 in next,getupvalues(f) do
+                    if v2==false then
+                        setupvalue(f,k2,true)
+                    end
+                end
+                screnv.pcall = real_pcall
+                break
+            end
+        end
+        return real_pcall(f)
+    end
+    
+    local h,char,play
+    play = game.Players.LocalPlayer
+    local uis = game:getService("UserInputService")
+    game:getService("RunService"):BindToRenderStep("",0,function()
+        char = play.Character
+        if char then h = char:findFirstChildOfClass("Humanoid") end
+        if not h then return end
+        if uis:IsKeyDown(Enum.KeyCode.V) then
+            h:ChangeState(11)
+        end
+    end)
+end)
+
+Give.Name = "Give"
+Give.Parent = Container
+Give.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Give.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Give.Position = UDim2.new(0.708513916, 0, 0.556453168, 0)
+Give.Size = UDim2.new(0, 132, 0, 19)
+Give.Font = Enum.Font.SourceSans
+Give.Text = "Give All Guns"
+Give.TextColor3 = Color3.fromRGB(255, 255, 255)
+Give.TextSize = 14.000
+Give.MouseButton1Click:Connect(function()
+    function getgun(name)
+        for i,v in next, game:GetService("Workspace"):GetDescendants() do
+            if v.ClassName == "StringValue" then 
+                if v.Value == name then 
+                    fireclickdetector(v.Parent.ClickDetector)
+                end
+            end
+        end
+    end
+    getgun("Pistol")
+    getgun("Shotgun")
+    getgun("Sniper")
+    getgun("Uzi")
+    getgun("Revolver")
+    getgun("Ak47")
+    getgun("Grenade")
+    getgun("Sword")
+    getgun("Plasma Pistol")
+    getgun("Flintlock")
+    getgun("Force-field Launcher")
+end)
+
+
+Mod.Name = "Mod"
+Mod.Parent = Container
+Mod.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Mod.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Mod.Position = UDim2.new(0.708513916, 0, 0.457913011, 0)
+Mod.Size = UDim2.new(0, 132, 0, 19)
+Mod.Font = Enum.Font.SourceSans
+Mod.Text = "Mod All Guns"
+Mod.TextColor3 = Color3.fromRGB(255, 255, 255)
+Mod.TextSize = 14.000
+Mod.MouseButton1Click:Connect(function()
+    x=require(game:GetService("ReplicatedStorage").Game.ItemConfig.Pistol)
+    x.MagSize = math.huge
+    x.FireFreq = 100
+    x.FireAuto = true
+    x.CamShakeMagnitude = 0
+    x=require(game:GetService("ReplicatedStorage").Game.ItemConfig.Shotgun)
+    x.MagSize = math.huge
+    x.FireFreq = 100
+    x.FireAuto = true
+    x.CamShakeMagnitude = 0
+    x=require(game:GetService("ReplicatedStorage").Game.ItemConfig.Uzi)
+    x.MagSize = math.huge
+    x.FireFreq = 100
+    x.FireAuto = true
+    x.CamShakeMagnitute = 0
+    x=require(game:GetService("ReplicatedStorage").Game.ItemConfig.Sniper)
+    x.MagSize = math.huge
+    x.FireFreq = 100
+    x.FireAuto = true
+    x.CamShakeMagnitude = 0
+    x=require(game:GetService("ReplicatedStorage").Game.ItemConfig.Revolver)
+    x.MagSize = math.huge
+    x.FireFreq = 100
+    x.FireAuto = true
+    x.CamShakeMagnitude = 0
+    x=require(game:GetService("ReplicatedStorage").Game.ItemConfig.Ak47)
+    x.MagSize = math.huge
+    x.FireFreq = 100
+    x.FireAuto = true
+    x.CamShakeMagnitude = 0
+end)
+
+Close.Name = "Close"
+Close.Parent = MainWindow
+Close.BackgroundColor3 = Color3.fromRGB(207, 0, 3)
+Close.BorderColor3 = Color3.fromRGB(105, 24, 127)
+Close.Position = UDim2.new(0.896797121, 0, 0.0186915994, 0)
+Close.Size = UDim2.new(0, 45, 0, 15)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 14.000
+Close.MouseButton1Click:Connect(function()
+MainWindow.Visible = false
+Container.Visible = false
+OpenFrame.Visible = true
+end)
+
+Site.Name = "Site"
+Site.Parent = MainWindow
+Site.BackgroundColor3 = Color3.fromRGB(105, 24, 127)
+Site.BorderColor3 = Color3.fromRGB(105, 24, 127)
+Site.Position = UDim2.new(0.351000011, 0, 0.939999998, 0)
+Site.Size = UDim2.new(0, 167, 0, 10)
+Site.Font = Enum.Font.SourceSans
+Site.Text = "Site: TecnoHub.xyz"
+Site.TextColor3 = Color3.fromRGB(255, 255, 255)
+Site.TextSize = 14.000
+
+Teleports.Name = "Teleports"
+Teleports.Parent = MainWindow
+Teleports.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Teleports.BorderColor3 = Color3.fromRGB(44, 44, 44)
+Teleports.Position = UDim2.new(0.0871886089, 0, 0.133956343, 0)
+Teleports.Size = UDim2.new(0, 118, 0, 17)
+Teleports.Font = Enum.Font.SourceSans
+Teleports.Text = "Teleports"
+Teleports.TextColor3 = Color3.fromRGB(255, 255, 255)
+Teleports.TextSize = 14.000
+
+Local.Name = "Local"
+Local.Parent = MainWindow
+Local.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Local.BorderColor3 = Color3.fromRGB(44, 44, 44)
+Local.Position = UDim2.new(0.708185017, 0, 0.133956343, 0)
+Local.Size = UDim2.new(0, 118, 0, 17)
+Local.Font = Enum.Font.SourceSans
+Local.Text = "Local"
+Local.TextColor3 = Color3.fromRGB(255, 255, 255)
+Local.TextSize = 14.000
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = TecnoHubJailbreak
+OpenFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenFrame.BackgroundTransparency = 1.000
+OpenFrame.Position = UDim2.new(0, 0, 0.463144958, 0)
+OpenFrame.Size = UDim2.new(0, 230, 0, 60)
+OpenFrame.Image = "rbxassetid://3570695787"
+OpenFrame.ImageColor3 = Color3.fromRGB(105, 24, 127)
+OpenFrame.ScaleType = Enum.ScaleType.Slice
+OpenFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+OpenFrame.SliceScale = 0.120
+OpenFrame.Visible = false
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.fromRGB(105, 24, 127)
+Open.BorderColor3 = Color3.fromRGB(105, 24, 127)
+Open.Position = UDim2.new(0.0652173907, 0, 0.0833333358, 0)
+Open.Size = UDim2.new(0, 200, 0, 50)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextSize = 14.000
+Open.MouseButton1Click:Connect(function()
+    MainWindow.Visible = true
+    Container.Visible = true
+    OpenFrame.Visible = false
+    end)
+
+-- This is Redwood Prison
+elseif game.PlaceId == 402122991 then
+-- Welcome
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Welcome = Instance.new("ScreenGui")
+local WelcomeFrame = Instance.new("ImageLabel")
+local PlayerName = Instance.new("TextLabel")
+local Sound = Instance.new("Sound")
+
+--Properties:
+
+Welcome.Name = "Welcome"
+Welcome.Parent = game.CoreGui
+
+WelcomeFrame.Name = "WelcomeFrame"
+WelcomeFrame.Parent = Welcome
+WelcomeFrame.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+WelcomeFrame.BackgroundTransparency = 1.000
+WelcomeFrame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+WelcomeFrame.Position = UDim2.new(0.726851881, 0, 0.108108103, 0)
+WelcomeFrame.Size = UDim2.new(0, 252, 0, 53)
+WelcomeFrame.Image = "rbxassetid://3570695787"
+WelcomeFrame.ImageColor3 = Color3.fromRGB(44, 44, 44)
+WelcomeFrame.ScaleType = Enum.ScaleType.Slice
+WelcomeFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+WelcomeFrame.SliceScale = 0.120
+
+PlayerName.Name = "PlayerName"
+PlayerName.Parent = WelcomeFrame
+PlayerName.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+PlayerName.Position = UDim2.new(0.15476191, 0, 0.264150947, 0)
+PlayerName.Size = UDim2.new(0, 173, 0, 25)
+PlayerName.Font = Enum.Font.SourceSans
+PlayerName.BorderColor3 = Color3.fromRGB(44,44,44)
+LocalPlayer = game.Players.LocalPlayer.Name
+PlayerName.Text = "Welcome To TecnoHub, ".. LocalPlayer
+PlayerName.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerName.TextSize = 14.000
+
+Sound.Name = "Sound"
+Sound.Parent = WelcomeFrame
+Sound.SoundId = "rbxassetid://2672209057"
+Sound.Volume = 0.5
+Sound:Play()
+wait(5)
+Sound:Pause()
+wait (10)
+WelcomeFrame.Visible = false
+
+-- Main Gui
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local TecnoHubRedwoodPrison = Instance.new("ScreenGui")
+local MainWindow = Instance.new("ImageLabel")
+local Title = Instance.new("TextLabel")
+local Container = Instance.new("ImageLabel")
+local GuardRoom = Instance.new("TextButton")
+local Toggle1 = Instance.new("TextButton")
+local Toggle2 = Instance.new("TextButton")
+local CellSpam = Instance.new("TextLabel")
+local Cells = Instance.new("TextButton")
+local Escape = Instance.new("TextButton")
+local Cafetaria = Instance.new("TextButton")
+local Tower = Instance.new("TextButton")
+local Helicopter = Instance.new("TextButton")
+local GateRoom = Instance.new("TextButton")
+local Logo = Instance.new("ImageLabel")
+local ItemInput = Instance.new("TextBox")
+local GetItem = Instance.new("TextButton")
+local Walkspeed = Instance.new("TextButton")
+local WalkSpeedInput = Instance.new("TextBox")
+local Jumpheight = Instance.new("TextBox")
+local Jumpheight_2 = Instance.new("TextButton")
+local Message = Instance.new("TextBox")
+local Title_2 = Instance.new("TextBox")
+local Walkspeed_2 = Instance.new("TextButton")
+local KeycardHammer = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local Title_3 = Instance.new("TextLabel")
+local Title_4 = Instance.new("TextLabel")
+local Title_5 = Instance.new("TextLabel")
+local OpenFrame = Instance.new("ImageLabel")
+local Open = Instance.new("TextButton")
+local SpamOff = Instance.new("TextButton")
+local Spam = Instance.new("TextButton")
+
+--Properties:
+
+TecnoHubRedwoodPrison.Name = "TecnoHubRedwoodPrison"
+TecnoHubRedwoodPrison.Parent = game.CoreGui
+
+MainWindow.Name = "MainWindow"
+MainWindow.Parent = TecnoHubRedwoodPrison
+MainWindow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainWindow.BackgroundTransparency = 1.000
+MainWindow.Position = UDim2.new(0.283179015, 0, 0.0307125151, 0)
+MainWindow.Size = UDim2.new(0, 562, 0, 321)
+MainWindow.Image = "rbxassetid://3570695787"
+MainWindow.ImageColor3 = Color3.fromRGB(105, 24, 127)
+MainWindow.ScaleType = Enum.ScaleType.Slice
+MainWindow.SliceCenter = Rect.new(100, 100, 100, 100)
+MainWindow.SliceScale = 0.120
+MainWindow.Active = true
+MainWindow.Draggable = true
+MainWindow.Visible = false
+
+Title.Name = "Title"
+Title.Parent = MainWindow
+Title.BackgroundColor3 = Color3.fromRGB(105, 24, 127)
+Title.BorderColor3 = Color3.fromRGB(105, 24, 127)
+Title.Position = UDim2.new(0.350533813, 0, 0.0186915882, 0)
+Title.Size = UDim2.new(0, 167, 0, 14)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "Redwood Prison"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 14.000
+
+Container.Name = "Container"
+Container.Parent = MainWindow
+Container.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Container.BackgroundTransparency = 1.000
+Container.Position = UDim2.new(0.0302491114, 0, 0.0841121003, 0)
+Container.Size = UDim2.new(0, 527, 0, 274)
+Container.Image = "rbxassetid://3570695787"
+Container.ImageColor3 = Color3.fromRGB(44, 44, 44)
+Container.ScaleType = Enum.ScaleType.Slice
+Container.SliceCenter = Rect.new(100, 100, 100, 100)
+Container.SliceScale = 0.120
+Container.Visible = false
+
+GuardRoom.Name = "GuardRoom"
+GuardRoom.Parent = Container
+GuardRoom.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+GuardRoom.BorderColor3 = Color3.fromRGB(255, 255, 255)
+GuardRoom.Position = UDim2.new(0.0386847258, 0, 0.209737808, 0)
+GuardRoom.Size = UDim2.new(0, 132, 0, 19)
+GuardRoom.Font = Enum.Font.SourceSans
+GuardRoom.Text = "Guard Room"
+GuardRoom.TextColor3 = Color3.fromRGB(255, 255, 255)
+GuardRoom.TextSize = 14.000
+GuardRoom.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.5340652, 5.46657801, -43.2391129) 
+end)
+
+Toggle1.Name = "Toggle1"
+Toggle1.Parent = Container
+Toggle1.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Toggle1.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Toggle1.Position = UDim2.new(0.858800769, 0, 0.157303333, 0)
+Toggle1.Size = UDim2.new(0, 43, 0, 15)
+Toggle1.Font = Enum.Font.SourceSans
+Toggle1.Text = "Off"
+Toggle1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle1.TextSize = 14.000
+Toggle1.MouseButton1Click:Connect(function()
+_G.SpamDoors = false
+end)
+
+Toggle2.Name = "Toggle2"
+Toggle2.Parent = Container
+Toggle2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Toggle2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Toggle2.Position = UDim2.new(0.858800769, 0, 0.239700332, 0)
+Toggle2.Size = UDim2.new(0, 43, 0, 15)
+Toggle2.Font = Enum.Font.SourceSans
+Toggle2.Text = "On"
+Toggle2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toggle2.TextSize = 14.000
+Toggle2.MouseButton1Click:Connect(function()
+-- On
+_G.SpamDoors = true
+-- Cells
+while true do
+    wait(0.2)
+if _G.SpamDoors == true then
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors["CellDoor1"],
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors["CellDoor2"],
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors["CellDoor3"],
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors["CellDoor4"],
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors["CellDoor5"],
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors["CellDoor6"],
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors["CellDoor7"],
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors["CellDoor8"],
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+-- End of cells
+-- Guard doors
+
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors.SlidingDoors,
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+-- Cell Block Entry
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors["BlockDoor1"],
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+
+local args;
+args = {
+    [1] = "updateDoorSystem",
+    [2] = workspace.AllDoors["BlockDoor2"],
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+end
+end
+end)
+
+
+CellSpam.Name = "CellSpam"
+CellSpam.Parent = Container
+CellSpam.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+CellSpam.BorderColor3 = Color3.fromRGB(44, 44, 44)
+CellSpam.Position = UDim2.new(0.841392636, 0, 0.0599250942, 0)
+CellSpam.Size = UDim2.new(0, 61, 0, 17)
+CellSpam.Font = Enum.Font.SourceSans
+CellSpam.Text = "Cell Spam"
+CellSpam.TextColor3 = Color3.fromRGB(255, 255, 255)
+CellSpam.TextSize = 14.000
+
+Cells.Name = "Cells"
+Cells.Parent = Container
+Cells.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Cells.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Cells.Position = UDim2.new(0.0386847258, 0, 0.314606726, 0)
+Cells.Size = UDim2.new(0, 132, 0, 19)
+Cells.Font = Enum.Font.SourceSans
+Cells.Text = "Cells"
+Cells.TextColor3 = Color3.fromRGB(255, 255, 255)
+Cells.TextSize = 14.000
+Cells.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.99999976, 4, 48) 
+end)
+
+Escape.Name = "Escape"
+Escape.Parent = Container
+Escape.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Escape.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Escape.Position = UDim2.new(0.0386847258, 0, 0.41198501, 0)
+Escape.Size = UDim2.new(0, 132, 0, 19)
+Escape.Font = Enum.Font.SourceSans
+Escape.Text = "Escape/Criminal Base"
+Escape.TextColor3 = Color3.fromRGB(255, 255, 255)
+Escape.TextSize = 14.000
+Escape.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-610.020203, -23.3024673, -333.158752) 
+end)
+
+Cafetaria.Name = "Cafetaria"
+Cafetaria.Parent = Container
+Cafetaria.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Cafetaria.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Cafetaria.Position = UDim2.new(0.0386847258, 0, 0.509363294, 0)
+Cafetaria.Size = UDim2.new(0, 132, 0, 19)
+Cafetaria.Font = Enum.Font.SourceSans
+Cafetaria.Text = "Cafetaria"
+Cafetaria.TextColor3 = Color3.fromRGB(255, 255, 255)
+Cafetaria.TextSize = 14.000
+Cafetaria.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.57430816, 4, -114.88028) 
+end)
+
+Tower.Name = "Tower"
+Tower.Parent = Container
+Tower.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Tower.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Tower.Position = UDim2.new(0.0386847258, 0, 0.614232183, 0)
+Tower.Size = UDim2.new(0, 132, 0, 19)
+Tower.Font = Enum.Font.SourceSans
+Tower.Text = "Tower"
+Tower.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tower.TextSize = 14.000
+Tower.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(111.128807, 27.4655285, -331.922913) 
+end)
+
+Helicopter.Name = "Helicopter"
+Helicopter.Parent = Container
+Helicopter.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Helicopter.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Helicopter.Position = UDim2.new(0.0386847258, 0, 0.726591706, 0)
+Helicopter.Size = UDim2.new(0, 132, 0, 19)
+Helicopter.Font = Enum.Font.SourceSans
+Helicopter.Text = "Helicopter"
+Helicopter.TextColor3 = Color3.fromRGB(255, 255, 255)
+Helicopter.TextSize = 14.000
+Helicopter.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(247.823441, 13.2787457, 52.9990768) 
+end)
+
+GateRoom.Name = "Gate Room"
+GateRoom.Parent = Container
+GateRoom.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+GateRoom.BorderColor3 = Color3.fromRGB(255, 255, 255)
+GateRoom.Position = UDim2.new(0.0386847258, 0, 0.827715278, 0)
+GateRoom.Size = UDim2.new(0, 132, 0, 19)
+GateRoom.Font = Enum.Font.SourceSans
+GateRoom.Text = "Gate Room"
+GateRoom.TextColor3 = Color3.fromRGB(255, 255, 255)
+GateRoom.TextSize = 14.000
+GateRoom.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(183.620224, 6.47154856, -424.897278) 
+end)
+
+Logo.Name = "Logo"
+Logo.Parent = Container
+Logo.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Logo.BorderColor3 = Color3.fromRGB(44, 44, 44)
+Logo.Position = UDim2.new(0.417794973, 0, 0.685393274, 0)
+Logo.Size = UDim2.new(0, 84, 0, 81)
+Logo.Image = "http://www.roblox.com/asset/?id=5024815481"
+
+ItemInput.Name = "ItemInput"
+ItemInput.Parent = Container
+ItemInput.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ItemInput.Position = UDim2.new(0.394584149, 0, 0.0898876414, 0)
+ItemInput.Size = UDim2.new(0, 108, 0, 17)
+ItemInput.Font = Enum.Font.SourceSans
+ItemInput.Text = "Item Name"
+ItemInput.TextColor3 = Color3.fromRGB(0, 0, 0)
+ItemInput.TextSize = 14.000
+
+GetItem.Name = "GetItem"
+GetItem.Parent = Container
+GetItem.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+GetItem.BorderColor3 = Color3.fromRGB(255, 255, 255)
+GetItem.Position = UDim2.new(0.411992252, 0, 0.19850181, 0)
+GetItem.Size = UDim2.new(0, 91, 0, 11)
+GetItem.Font = Enum.Font.SourceSans
+GetItem.Text = "Get Item"
+GetItem.TextColor3 = Color3.fromRGB(255, 255, 255)
+GetItem.TextSize = 14.000
+GetItem.MouseButton1Click:Connect(function()
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", (ItemInput.Text))
+end)
+
+Walkspeed.Name = "Walkspeed"
+Walkspeed.Parent = Container
+Walkspeed.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Walkspeed.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Walkspeed.Position = UDim2.new(0.411992252, 0, 0.423220932, 0)
+Walkspeed.Size = UDim2.new(0, 91, 0, 11)
+Walkspeed.Font = Enum.Font.SourceSans
+Walkspeed.Text = "Set Walkspeed"
+Walkspeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+Walkspeed.TextSize = 14.000
+Walkspeed.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = WalkSpeedInput.Text
+end)
+
+WalkSpeedInput.Name = "WalkSpeedInput"
+WalkSpeedInput.Parent = Container
+WalkSpeedInput.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WalkSpeedInput.Position = UDim2.new(0.394584149, 0, 0.314606756, 0)
+WalkSpeedInput.Size = UDim2.new(0, 108, 0, 17)
+WalkSpeedInput.Font = Enum.Font.SourceSans
+WalkSpeedInput.Text = "WalkSpeed"
+WalkSpeedInput.TextColor3 = Color3.fromRGB(0, 0, 0)
+WalkSpeedInput.TextSize = 14.000
+
+Jumpheight.Name = "Jumpheight"
+Jumpheight.Parent = Container
+Jumpheight.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Jumpheight.Position = UDim2.new(0.394584149, 0, 0.509363294, 0)
+Jumpheight.Size = UDim2.new(0, 108, 0, 17)
+Jumpheight.Font = Enum.Font.SourceSans
+Jumpheight.Text = "JumpHeight"
+Jumpheight.TextColor3 = Color3.fromRGB(0, 0, 0)
+Jumpheight.TextSize = 14.000
+
+Jumpheight_2.Name = "Jumpheight"
+Jumpheight_2.Parent = Container
+Jumpheight_2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Jumpheight_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Jumpheight_2.Position = UDim2.new(0.411992252, 0, 0.61797744, 0)
+Jumpheight_2.Size = UDim2.new(0, 91, 0, 11)
+Jumpheight_2.Font = Enum.Font.SourceSans
+Jumpheight_2.Text = "Set Jump Height"
+Jumpheight_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Jumpheight_2.TextSize = 14.000
+Jumpheight_2.MouseButton1Click:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Jumpheight.Text
+end)
+
+Message.Name = "Message"
+Message.Parent = Container
+Message.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Message.Position = UDim2.new(0.673114121, 0, 0.659176052, 0)
+Message.Size = UDim2.new(0, 108, 0, 17)
+Message.Font = Enum.Font.SourceSans
+Message.Text = "Message"
+Message.TextColor3 = Color3.fromRGB(0, 0, 0)
+Message.TextSize = 14.000
+
+Title_2.Name = "Title"
+Title_2.Parent = Container
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.Position = UDim2.new(0.673114121, 0, 0.565543056, 0)
+Title_2.Size = UDim2.new(0, 108, 0, 17)
+Title_2.Font = Enum.Font.SourceSans
+Title_2.Text = "Title"
+Title_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.TextSize = 14.000
+
+Walkspeed_2.Name = "Walkspeed"
+Walkspeed_2.Parent = Container
+Walkspeed_2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Walkspeed_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Walkspeed_2.Position = UDim2.new(0.688588023, 0, 0.752808928, 0)
+Walkspeed_2.Size = UDim2.new(0, 91, 0, 11)
+Walkspeed_2.Font = Enum.Font.SourceSans
+Walkspeed_2.Text = "Submit"
+Walkspeed_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Walkspeed_2.TextSize = 14.000
+Walkspeed_2.MouseButton1Click:Connect(function()
+local TitleV = Title_2.Text
+local MessageV = Message.Text
+local args;
+args = {
+    [1] = "FireAllClients",
+    [2] = "showNotice",
+    [3] = TitleV,
+    [4] = MessageV,
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+end)
+
+KeycardHammer.Name = "Keycard/Hammer"
+KeycardHammer.Parent = Container
+KeycardHammer.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+KeycardHammer.BorderColor3 = Color3.fromRGB(255, 255, 255)
+KeycardHammer.Position = UDim2.new(0.649903297, 0, 0.408239663, 0)
+KeycardHammer.Size = UDim2.new(0, 132, 0, 19)
+KeycardHammer.Font = Enum.Font.SourceSans
+KeycardHammer.Text = "Keycard/Hammer"
+KeycardHammer.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeycardHammer.TextSize = 14.000
+KeycardHammer.MouseButton1Click:Connect(function()
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "Hammer")
+game.Workspace.resources.RemoteFunction:InvokeServer("giveItem", "Fake ID Card")
+end)
+
+Close.Name = "Close"
+Close.Parent = MainWindow
+Close.BackgroundColor3 = Color3.fromRGB(207, 0, 3)
+Close.BorderColor3 = Color3.fromRGB(105, 24, 127)
+Close.Position = UDim2.new(0.896797121, 0, 0.0186915994, 0)
+Close.Size = UDim2.new(0, 45, 0, 15)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextSize = 14.000
+Close.MouseButton1Click:Connect(function()
+MainWindow.Visible = false
+Container.Visible = false
+OpenFrame.Visible = true
+end)
+
+TextLabel.Parent = MainWindow
+TextLabel.BackgroundColor3 = Color3.fromRGB(105, 24, 127)
+TextLabel.BorderColor3 = Color3.fromRGB(105, 24, 127)
+TextLabel.Position = UDim2.new(0.339857668, 0, 0.934579432, 0)
+TextLabel.Size = UDim2.new(0, 179, 0, 15)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Site: TecnoHub.xyz"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+
+Title_3.Name = "Title"
+Title_3.Parent = MainWindow
+Title_3.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Title_3.BorderColor3 = Color3.fromRGB(44, 44, 44)
+Title_3.Position = UDim2.new(0.0871886089, 0, 0.133956343, 0)
+Title_3.Size = UDim2.new(0, 118, 0, 17)
+Title_3.Font = Enum.Font.SourceSans
+Title_3.Text = "Teleports"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextSize = 14.000
+
+Spam.Name = "Spam"
+Spam.Parent = Container
+Spam.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Spam.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Spam.Position = UDim2.new(0.688588023, 0, 0.811203063, 0)
+Spam.Size = UDim2.new(0, 91, 0, 11)
+Spam.Font = Enum.Font.SourceSans
+Spam.Text = "Spam"
+Spam.TextColor3 = Color3.fromRGB(255, 255, 255)
+Spam.TextSize = 14.000
+Spam.MouseButton1Click:Connect(function()
+_G.SpamToggle = true
+while _G.SpamToggle do
+wait(0.1)
+local args;
+args = {
+[1] = "FireAllClients",
+[2] = "showNotice",
+[3] = Title_2.Text,
+[4] = Message.Text,
+}
+
+workspace.resources.RemoteEvent:FireServer(unpack(args))
+end
+end)
+
+SpamOff.Name = "SpamOff"
+SpamOff.Parent = Container
+SpamOff.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+SpamOff.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SpamOff.Position = UDim2.new(0.688588023, 0, 0.854998708, 0)
+SpamOff.Size = UDim2.new(0, 91, 0, 11)
+SpamOff.Font = Enum.Font.SourceSans
+SpamOff.Text = "Spam Off"
+SpamOff.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpamOff.TextSize = 14.000
+SpamOff.MouseButton1Click:Connect(function()
+_G.SpamToggle = false
+end)
+
+Title_4.Name = "Title"
+Title_4.Parent = MainWindow
+Title_4.BackgroundColor3 = Color3.fromRGB(105, 24, 127)
+Title_4.BorderColor3 = Color3.fromRGB(105, 24, 127)
+Title_4.Position = UDim2.new(0.624555171, 0, 0.934579432, 0)
+Title_4.Size = UDim2.new(0, 167, 0, 14)
+Title_4.Font = Enum.Font.SourceSans
+Title_4.Text = "16 is Default WalkSpeed"
+Title_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.TextSize = 14.000
+
+Title_5.Name = "Title"
+Title_5.Parent = MainWindow
+Title_5.BackgroundColor3 = Color3.fromRGB(105, 24, 127)
+Title_5.BorderColor3 = Color3.fromRGB(105, 24, 127)
+Title_5.Position = UDim2.new(0.0747330785, 0, 0.937694669, 0)
+Title_5.Size = UDim2.new(0, 167, 0, 14)
+Title_5.Font = Enum.Font.SourceSans
+Title_5.Text = "50 is Default JumpHeight"
+Title_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_5.TextSize = 14.000
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = TecnoHubRedwoodPrison
+OpenFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenFrame.BackgroundTransparency = 1.000
+OpenFrame.Position = UDim2.new(0, 0, 0.463144958, 0)
+OpenFrame.Size = UDim2.new(0, 230, 0, 60)
+OpenFrame.Image = "rbxassetid://3570695787"
+OpenFrame.ImageColor3 = Color3.fromRGB(105, 24, 127)
+OpenFrame.ScaleType = Enum.ScaleType.Slice
+OpenFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+OpenFrame.SliceScale = 0.120
+OpenFrame.Visible = false
+
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.fromRGB(105, 24, 127)
+Open.BorderColor3 = Color3.fromRGB(105, 24, 127)
+Open.Position = UDim2.new(0.0652173907, 0, 0.0833333358, 0)
+Open.Size = UDim2.new(0, 200, 0, 50)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextSize = 14.000
+Open.MouseButton1Click:Connect(function()
+MainWindow.Visible = true
+Container.Visible = true
+OpenFrame.Visible = false
+end)
+
+else
+print("Invalid Game "..game.PlaceId.." is not available")
+end
