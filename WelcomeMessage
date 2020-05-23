@@ -100,7 +100,6 @@ MainWindow.SliceCenter = Rect.new(100, 100, 100, 100)
 MainWindow.SliceScale = 0.120
 MainWindow.Draggable = true
 MainWindow.Active = true
-MainWindow.Visible = false
 
 Title.Name = "Title"
 Title.Parent = MainWindow
@@ -124,7 +123,6 @@ Container.ImageColor3 = Color3.fromRGB(44, 44, 44)
 Container.ScaleType = Enum.ScaleType.Slice
 Container.SliceCenter = Rect.new(100, 100, 100, 100)
 Container.SliceScale = 0.120
-Container.Visible = false
 
 Bank.Name = "Bank"
 Bank.Parent = Container
@@ -625,11 +623,8 @@ Open.MouseButton1Click:Connect(function()
     MainWindow.Visible = true
     Container.Visible = true
     OpenFrame.Visible = false
-    end)
-if WhitelistCheckerVisible == true then do
-MainWindow.Visible = true
-Container.Visible = true
-end
+end)
+ 
 -- This is Redwood Prison
 elseif game.PlaceId == 402122991 then
 -- Welcome
@@ -680,7 +675,6 @@ Sound.Volume = 0.5
 Sound:Play()
 wait(5)
 Sound:Pause()
-wait (10)
 WelcomeFrame.Visible = false
 
 -- Main Gui
@@ -743,7 +737,6 @@ MainWindow.SliceCenter = Rect.new(100, 100, 100, 100)
 MainWindow.SliceScale = 0.120
 MainWindow.Active = true
 MainWindow.Draggable = true
-MainWindow.Visible = Visible
 
 Title.Name = "Title"
 Title.Parent = MainWindow
@@ -767,7 +760,6 @@ Container.ImageColor3 = Color3.fromRGB(44, 44, 44)
 Container.ScaleType = Enum.ScaleType.Slice
 Container.SliceCenter = Rect.new(100, 100, 100, 100)
 Container.SliceScale = 0.120
-Container.Visible = Visible
 
 GuardRoom.Name = "GuardRoom"
 GuardRoom.Parent = Container
