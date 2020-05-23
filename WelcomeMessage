@@ -86,8 +86,8 @@ local Open = Instance.new("TextButton")
 --Properties:
 
 TecnoHubJailbreak.Name = "TecnoHubJailbreak"
-TecnoHubJailbreak.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
+TecnoHubJailbreak.Parent = game.CoreGui
+local Visible = false
 MainWindow.Name = "MainWindow"
 MainWindow.Parent = TecnoHubJailbreak
 MainWindow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -101,6 +101,7 @@ MainWindow.SliceCenter = Rect.new(100, 100, 100, 100)
 MainWindow.SliceScale = 0.120
 MainWindow.Draggable = true
 MainWindow.Active = true
+MainWindow.Visible = Visible
 
 Title.Name = "Title"
 Title.Parent = MainWindow
@@ -124,6 +125,7 @@ Container.ImageColor3 = Color3.fromRGB(44, 44, 44)
 Container.ScaleType = Enum.ScaleType.Slice
 Container.SliceCenter = Rect.new(100, 100, 100, 100)
 Container.SliceScale = 0.120
+Container.Visible = Visible
 
 Bank.Name = "Bank"
 Bank.Parent = Container
@@ -725,7 +727,7 @@ local Spam = Instance.new("TextButton")
 
 TecnoHubRedwoodPrison.Name = "TecnoHubRedwoodPrison"
 TecnoHubRedwoodPrison.Parent = game.CoreGui
-
+local Visible = false
 MainWindow.Name = "MainWindow"
 MainWindow.Parent = TecnoHubRedwoodPrison
 MainWindow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -739,7 +741,7 @@ MainWindow.SliceCenter = Rect.new(100, 100, 100, 100)
 MainWindow.SliceScale = 0.120
 MainWindow.Active = true
 MainWindow.Draggable = true
-MainWindow.Visible = false
+MainWindow.Visible = Visible
 
 Title.Name = "Title"
 Title.Parent = MainWindow
@@ -763,7 +765,7 @@ Container.ImageColor3 = Color3.fromRGB(44, 44, 44)
 Container.ScaleType = Enum.ScaleType.Slice
 Container.SliceCenter = Rect.new(100, 100, 100, 100)
 Container.SliceScale = 0.120
-Container.Visible = false
+Container.Visible = Visible
 
 GuardRoom.Name = "GuardRoom"
 GuardRoom.Parent = Container
