@@ -1261,10 +1261,6 @@ Container.Visible = true
 OpenFrame.Visible = false
 end)
 
-if WhitelistCheckerVisible == true then do
-MainWindow.Visible = true
-Container.Visible = true
-end
 else
 print("Invalid Game "..game.PlaceId.." is not available")
 end
