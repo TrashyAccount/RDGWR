@@ -624,7 +624,12 @@ Open.MouseButton1Click:Connect(function()
     Container.Visible = true
     OpenFrame.Visible = false
 end)
- 
+ game:GetService("StarterGui"):SetCore("SendNotification", {
+	    Title = "Thanks For Using TecnoHub",
+	    Text = "Site:TecnoHub.xyz",
+        Duration = 15
+	})
+
 -- This is Redwood Prison
 elseif game.PlaceId == 402122991 then
 -- Welcome
@@ -1260,6 +1265,11 @@ MainWindow.Visible = true
 Container.Visible = true
 OpenFrame.Visible = false
 end)
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	    Title = "Thanks For Using TecnoHub",
+	    Text = "Site:TecnoHub.xyz",
+        Duration = 15
+	})
 
 else
 print("Invalid Game "..game.PlaceId.." is not available")
